@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* CSS Document */
+
+.preload{/**/
+  transition:0 !important;
+}
+
+/*****共通部分
+***********************************************/
+body{
+  font: 16px "Hiragino Kaku Gothic Pro","メイリオ",sans-serif;
+  margin: 0;
+  background: url(../images/img_background.jpg);
+  /*天地左右の中央に配置*/
+　background-position: center center;
+  /*画像をタイル状に繰り返さない*/
+  background-repeat: no-repeat;
+  /*コンテンツの高さが画像の高さより大きい時、動かないように固定*/
+  background-attachment: fixed;
+  /*表示するコンテンツの大きさにに基づいて、背景画像を調整*/
+  background-size: cover;
+  /*背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #f4a460;
+}
+
+a{/*สีของลิงค์*/
+  color:#3997a7;
+  transition: all 0.5s;
+}
+a:visited{
+  color:#3997a7;
+}
+a:hover{
+  color:#fff;
+  transition: all 0.5s;
+}
+.wrapper{/*ทำให้ทุกอย่างมาอยุ่ตรงกลาง*/
+  width: 1040px;
+  margin: 0 auto;
+}
+
+/*****ヘッダー*****/
+.header_top h1{
+  color:#fff;
+  font-size: 24px;
+  text-shadow: 1px 1px 3px #000;/*สีของหัวข้อบนสุด*/
+}
+.header_top h1 span {
+	color: #fff;
+	font-size: 16px;
+}
+
+/*****メインビジュアルรูปแรกตรงกลาง*****/
+.main_visual img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*****ナビゲーション*****/
+.main_navigation{
+  overflow:hidden;/*下のコンテンツが表示される*/
+}
+.main_navigation ul {
+  margin: auto; /*中央に配置*/
+  list-style: none;
+}
+.main_navigation li {
+	width: calc(100% / 4);	/*横幅の指定ทำให้รูปเหลือข้างซ้ายขวา25*/
+	text-align: center;	/*文字を中央にเมนูให้เรียงตรงกลางใต้รูป*/
+	float: left;	/*左から並べる*/
+}
+.main_navigation a {
+	display: block;	/*1つのli全体にリンクを有効にするเมนูใต้ภาพเป็นตัวหนา กลาง เส้นใต้ */
+	background-color: rgba(175, 35, 48, 0.8); /*แดง เขียว ฟ้า อัลฟ้า*/
+  text-decoration: none;	/*ブラウザ標準のリンク装飾をオフに*/
+  color: #fff; /*文字色の変更*/
+  font-size: 16px;/*フォントサイズの指定*/
+  letter-spacing: 5px;/*文字と文字の間隔をあける*/
+  font-weight: bold;/*文字の太さを調整*/
+  line-height: 45px;/*行間の指定（ナビボタンの高さ指定）*/
+}
+.main_navigation a:hover{
+  background-color: rgba(175, 35, 38, 8);/*背景色の指定เมาส์ชี้ไปที่เมนูแล้วสีเปลี่ยนที่ปุ่ม*/
+  color: #fff;	/*文字色の変更*/
+  transition: all 0.5s;/*ホバー時の動きをなめらかにする*/
+}
+
+
+/*****フッター*****/
+.footer_top{
+  display: table;/*文字の上下中央寄せทำให้กรอบสีแดงอยู่เฉพาะตรงด้านล่าง*/
+  width: 100%;
+  height: 200px;
+  text-align: center;/*文字の中央寄せ*/
+  background-color: rgba(255, 255, 255, 1);/*背景色の指定*สีแดงใสส่วนฟุตต้า*/
+}
+.footer_top .copyright{/*Logo ไปอยุ่ด้านล่างตรงกลาง*/
+  display: table-cell;/*文字の上下中央寄せ*/
+  vertical-align: middle;/*文字の上下中央寄せ*/
+  color:#000000;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .2em;
+}
+.footer_top .copyright img {/*โลโก้ด้านล่าง ให้เล็กลง*/
+	width: 130px;
+	height: auto;
+}
+
+/*****メインコンテンツ・トップページ
+***********************************************/
+.article_top{
+  margin: 30px auto 0;/*ตัวหนังสือใต้ภาพล่าง0*/
+}
+.section_top{
+  width: calc(50% - 15px);	/*横幅の指定ความกว้างกรอบตรงกลางหน้าprofile*/
+  padding: 2.5%;/*余白の指定 ทำให้ภาพอยุ่ที่กลางไม่ว่าจะคอม ไอโฟน*/
+  margin-bottom: 30px;
+  background-color: rgba(35,100, 200, 0.8);/*背景色の指定*/
+  float: left;/*ทำให้ภาพอยู่ด้านซ้ายขวา*/
+}
+.section_profile{
+  width: 100%;	/*横幅の指定ความกว้างกรอบตรงกลางหน้าprofile*/
+  padding: 2.5%;/*余白の指定 ทำให้ภาพอยุ่ที่กลางไม่ว่าจะคอม ไอโฟน*/
+  margin-bottom: 30px;
+  background-color: rgba(35,100, 200, 0.8);/*背景色の指定*/
+  float: center;/*ทำให้ภาพอยู่ด้านซ้ายขวา*/
+}
+.section_news{
+  width: 100%;	/*横幅の指定ความกว้างกรอบตรงกลางหน้าprofile*/
+  padding: 2.5%;/*余白の指定 ทำให้ภาพอยุ่ที่กลางไม่ว่าจะคอม ไอโฟน*/
+  margin-bottom: 30px;
+  background-color: rgba(35,100, 200, 0.8);/*背景色の指定*/
+  float: center;/*ทำให้ภาพอยู่ด้านซ้ายขวา*/
+}
+.section_top:nth-child(2n){/*ทำให้ภาพซ้ายขวาอยู่ตรงกลางเท่ากันสองข้าง*/
+  margin-left: 30px;/*2の倍数の記事は左側に余白を30px*/
+}
+.section_profile img{
+  width: 80%;
+  padding: 2.5%;
+  margin-bottom: 15px;/*ความกว้างของสีแดงหลังภาพ*/
+}
+.section_profile p{
+  width: 80%;
+  margin-left: 100px;
+  padding: 1%;
+  text-align: left;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+.section_news img{
+  width: 80%;
+  padding: 2.5%;
+  margin-bottom: 15px;/*ความกว้างของสีแดงหลังภาพ*/
+}
+.section_news p{
+  width: 80%;
+  margin-left: 100px;
+  padding: 1%;
+  text-align: left;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+.section_profile {
+  text-align: center;/*ทำให้ภาพโปรไฟท์อยุ่ตรงกลาง*/
+}
+.section_news {
+  text-align: center;/*ทำให้ภาพโปรไฟท์อยุ่ตรงกลาง*/
+}
+.section_top iframe{
+  width: 100%;
+  margin-bottom: 10px;/*ทำให้สีแดงใต้ภาพครอบคลุมวีดีโอด้วย*/
+}
+
+.section_top h1{/*ตัวหนังสือในกรอบสีแดงซ้ายขวา*/
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: .1em;/*文字間隔*/
+  border-bottom: 1px solid #bababa;/*文字の下部に線を描く*/
+  margin-bottom: 20px;/*セクションタイトルの下に余白をつくる*/
+}
+.section_top p{/*ตัวหนังสือสีขาวในกรอบแดงใต้ภาพ*/
+  color:#fff;
+  line-height: 1.75;/*行間設定*/
+  margin-bottom: 28px;/*ที่ว่างด้านระว่างปุ่มกดกลับไปหน้าเดิมในกรอบแดง*/
+}
+.section_top .btn{/*บุ่มกดย้อนกลับไปหน้าก่อนหน้าในกรอบแดง*/
+  color: #fff;
+  background-color: #3998a7;
+  padding: 10px 38px;
+  border-radius: 5px;/*角を丸くする*/
+  text-decoration: none;
+  float: right;/*ทำให้ปุ๋มกดย้อนกลับไปหน้าก่อนหน้าไปอยู่ทางขวา*/
+}
+.section_top .btn:hover{
+  color:  #3998a7;
+  background-color: #fff;
+}
+.section_top img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.section_top iframe{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/*****メインコンテンツ・ディスコグラフィーกรอบแดงตรงกลางหน้าดีโคกราฟฟี้
+***********************************************/
+.article_discography {/*แทบแดงตรงเมนู*/
+  margin: 30px auto 0;
+}
+.section_discography {/*กรอบแดงตรงกลางใหญ๋ๆ*/
+  width: 100%;
+  padding: 2.5%;
+  margin-bottom: 30px;
+  background-color: rgba(35,100, 200, 0.8);/*แดง เขียว น้ำเงิน อัลฟา*/
+  /*float: left;*/
+  clear: both;
+  overflow: hidden;
+}
+.box_left {/*ตัวหนังสือให้ไปอยู่ข้างภาพด้านซ้าย*/
+  width: 50%;
+  float: left;
+}
+.box_right {
+  width: 50%;
+  float: right;
+}
+.section_discography h1 {
+  font-size: 24px;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+.section_discography h2 {
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #bababa;
+  margin-bottom: 20px;
+}
+.section_discography p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+.section_discography img {
+  max-width: 90%;
+  margin-bottom: 10px;
+}
+.section_discography ul {
+  list-style: none;
+}
+.section_discography li {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.75;
+}
